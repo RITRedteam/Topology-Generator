@@ -10,13 +10,15 @@ https://github.com/RITRedteam/Topology-Generator
 https://github.com/micahjmartin/detcord
 '''
 
+# pylint: disable=import-error, invalid-name, unused-wildcard-import
+
 import os
 from detcord import action, display
 
 if os.path.exists('actions'):
     from actions import *
 
-env = dict()  # pylint: disable=invalid-name
+env = dict()
 env['user'] = 'root'
 env['pass'] = 'changeme'
 env['hosts'] = []  # DYNAMICALLY GENERATED IN build_hosts()
@@ -32,6 +34,17 @@ def test(host):
     '''Print the hostname of the box'''
     display(host.run("command hostname"))
 
+def on_detcord_begin(detfile="", hosts=[], actions=[], threading=False):
+    pass
+
+def on_detcord_action(host="", action="", return_value=None):
+    pass
+
+def on_detcord_action_fail(host="", action="", exception=None):
+    pass
+
+def on_detcord_end(detfile=""):
+    pass
 
 def build_hosts():
     '''Build the hosts for the ENV dynamically
