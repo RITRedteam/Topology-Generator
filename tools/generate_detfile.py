@@ -59,7 +59,7 @@ def get_hosts(data):
             hosts += [host]
     return hosts
 
-def build_detfile(data):
+def build_detfile(filename, data):
     # Build the hosts section
     hosts = "HOSTS = [\n"
     for host in get_hosts(data):
@@ -87,7 +87,7 @@ def build_detfile(data):
     if data.get('name', False): info += [data['name']]
     if data.get('date', False): info += [data['date']]
     info = " - ".join(info)
-    print(SKEL.format(filename="test.json", info=info, teams=teams, hosts=hosts))
+    return SKEL.format(filename=filename, info=info, teams=teams, hosts=hosts)
         
 
 def main():
@@ -98,7 +98,8 @@ def main():
     except (IndexError) as E:
         print("USAGE: {} <topology>".format(sys.argv[0]))
         quit(1)
-    build_detfile(config)
+    with open("detfile.py", 'w') as fil:
+        fil.write(build_detfile(sys.argv[1], config))
 
 if __name__ == "__main__":
     main()
