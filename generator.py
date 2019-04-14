@@ -2,8 +2,14 @@
 # Author: Micah Martin
 
 import json
-import yaml
-from termcolor import colored as c
+#import yaml
+import sys
+
+try:
+    from termcolor import colored as c
+except:
+    def c(text, *ars, **kwargs):
+        return text
 
 COLOR = 'blue'
 
@@ -105,7 +111,10 @@ def main():
     # Get the networks
     config['networks'] = addNetworks()
     print(json.dumps(config, indent=4))
-    print(yaml.dump(config, default_flow_style=False))
+    with open("newtopology.json", "w") as fil:
+        fil.write(json.dumps(config, indent=2))
+        fil.write("\n")
+    print("topology saved to newtopology.json", file=sys.stderr)
 
 
 if __name__ == '__main__':
