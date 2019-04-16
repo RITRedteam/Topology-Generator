@@ -22,6 +22,7 @@ env = dict()
 env['user'] = 'root'
 env['pass'] = 'changeme'
 env['hosts'] = []  # DYNAMICALLY GENERATED IN build_hosts()
+env['silent'] = False  # https://github.com/micahjmartin/detcord/wiki/Detfile-Environment#silent
 env['threading'] = False
 
 {hosts}
