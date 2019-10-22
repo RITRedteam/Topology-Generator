@@ -8,7 +8,7 @@
         "ip": "10.x.1",
         "hosts": [
         {
-          "os": "ElementaryOS",
+          "os": "Linux ElementaryOS",
           "name": "Linux A",
           "ip": "10"
         },
@@ -23,7 +23,7 @@
           "ip": "30"
         },
         {
-          "os": "Mint",
+          "os": "Linux Mint",
           "name": "Linux D",
           "ip": "40"
         },
@@ -54,12 +54,12 @@
           "ip": "1"
         },
         {
-          "os": "CentOs 7",
+          "os": "CentOS 7",
           "name": "Web",
           "ip": "2"
         },
         {
-          "os": "ubuntu16",
+          "os": "Ubuntu16",
           "name": "DB",
           "ip": "3"
         },
@@ -69,7 +69,7 @@
           "ip": "4"
         },
         {
-          "os": "Centos 7",
+          "os": "CentOS 7",
           "name": "Gitlab",
           "ip": "5"
         }
