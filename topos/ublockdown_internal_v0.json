@@ -1,41 +1,46 @@
 {
-  "name": "UB Internal Lockdown",
+  "name": "UB Lockdown",
   "date": "Fall 2019",
   "teams": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
   "networks": [
-    {
-      "name": "client",
-      "ip": "10.x.1",
-      "hosts": [
         {
-          "os": "Ubuntu 16",
-          "name": "Web Server",
+        "name": "client",
+        "ip": "10.x.1",
+        "hosts": [
+        {
+          "os": "ElementaryOS",
+          "name": "Linux A",
           "ip": "10"
         },
         {
-          "os": "CentOS 7",
+          "os": "Fedora 30",
           "name": "Linux B",
           "ip": "20"
         },
         {
-          "os": "Ubuntu 16",
+          "os": "CentOS",
           "name": "Linux C",
           "ip": "30"
         },
         {
-          "os": "Win10",
-          "name": "Windows A",
+          "os": "Mint",
+          "name": "Linux D",
           "ip": "40"
         },
         {
           "os": "Win7",
-          "name": "Windows B",
+          "name": "Windows A",
           "ip": "50"
         },
         {
           "os": "Win2019",
           "name": "AD",
           "ip": "60"
+        },
+         {
+          "os": "Win10",
+          "name": "Windows B",
+          "ip": "70"
         }
       ]
     },
@@ -49,7 +54,7 @@
           "ip": "1"
         },
         {
-          "os": "ubuntu16",
+          "os": "CentOs 7",
           "name": "Web",
           "ip": "2"
         },
